@@ -14,8 +14,8 @@ import { Fragment, useEffect, useState } from "react";
 import { manufacturers } from "@/constants";
 import clsx from "clsx";
 const SearchManufacturer = ({
-  manufacturer,
-  setManufacturer,
+  selected,
+  setSelected,
 }: searchManufacturerProps) => {
   const [query, setQuery] = useState("");
   const filteredManufacturers =
@@ -30,8 +30,8 @@ const SearchManufacturer = ({
   return (
     <div className="search-manufacturer">
       <Combobox
-        value={manufacturer}
-        onChange={setManufacturer}
+        value={selected}
+        onChange={setSelected}
         onClose={() => setQuery("")}
       >
         <div className="relative w-full">
